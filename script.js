@@ -107,7 +107,7 @@ var lon=response.coord.lon;
                         newContainer.append(newIcon);
 
                         var newTemp=$("<h5>");
-                        newTemp.text("Temp: "+response.daily[i].temp.day);
+                        newTemp.text("Temp: "+Number(response.daily[i].temp.day).toFixed(1));
                         newContainer.append(newTemp);
 
                         var newHumidity=$("<h5>");
