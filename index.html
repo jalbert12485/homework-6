@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- My css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Page title bar -->
+    <nav class="navbar navbar-light bg-dark">
+        <span class="h1 mr-auto ml-auto nav-text">Weather Dashboard</span>
+    </nav>
+
+    <!-- Content box -->
+    <div class="container-fluid row bg-light p-0 mr-0 ml-0">
+        <!-- Aside with selected cities -->
+        <aside class="col-4 pt-4 pl-4">
+            <!-- Input form -->
+            <form>
+                <div class="form-row align-items-center">
+                    <div class="col-sm-9">
+                        <label class="sr-only" for="city-input">Search for City</label>
+                        <input type="text" class="form-control" id="city-input" placeholder="Search for City">
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="submit" id="city-submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+            <div class="container mt-2" id="city-container"></div>
+        </aside>
+
+        <!-- Display portion -->
+        <main class="col-8 bg-white">
+            <!-- Current Info -->
+            <section class="row border m-1">
+                <ul><h1 id="current-city"> Current City </h1>
+                <li><h3 id="current-temp"> Temperature: </h3></li>
+                <li><h3 id="current-hum"> Humidity: </h3></li>
+                <li><h3 id="current-wind"> Wind Speed: </h3></li>
+                <li><h3 id="current-uv"> UV Index: </h3></li>
+                </ul>
+            </section>
+            <!-- Forecast -->
+            <h1>5-day Forecast</h1>
+            <section class="row" id="forecast-row" >
+   
+            </section>
+        </main>
+
+        <!-- content box end -->
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <!-- BootStrap -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <!-- Moment -->
+    <script src="moment.js"></script>
+    <!-- My Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
