@@ -39,10 +39,11 @@ function getLocal(){
 
 function addCity(){
     var cityInput=$("#city-input").val().trim();
+    if((cityInput != null) && (cityInput != "")){
     cities.push(cityInput);
     currentCity=cityInput;
     saveToLocal();
-    displayCities();
+    displayCities();}
 }
 
 function removeCity(cityNumber){
